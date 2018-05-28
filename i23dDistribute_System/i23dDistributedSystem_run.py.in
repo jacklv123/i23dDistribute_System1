@@ -1,0 +1,213 @@
+'''
+create by jacklv 2018.5.15
+'''
+from collections import deque
+import os
+import subprocess
+import sys
+import time
+import mpi4py.MPI as MPI
+import socket
+
+I23D_BIN = "@I23D_BUILD_DIR@"
+CAMERA_SENSOR_WIDTH_DIRECTORY = "@I23D_BUILD_DIR@" + "/../i23dSFM/i23dSFM/exif/sensor_width_database/sensor_width_camera_database.txt"
+host= "@I23D_BUILD_DIR@"+"/../i23dDistribute_System/hosts.txt"
+
+#argv
+input_dir = sys.argv[1]
+output_dir = sys.argv[2]
+nparts=int(sys.argv[3])
+#constant
+SERVER_RANK=0
+Start=1
+Finish=0
+
+#comm_world
+comm = MPI.COMM_WORLD
+comm_rank = comm.Get_rank()  #rank of the now process
+comm_size = comm.Get_size() #size of all processes
+name=socket.getfqdn(socket.gethostname())
+print str(name)+' '+str(comm_rank)+' '+str(comm_size)
+#function
+def createFolder(path):
+    oldmask = os.umask(000)
+    if not os.path.exists(path):
+        os.mkdir(path,0777)
+    os.umask(oldmask)
+#server
+class Server:
+    def __init__(self, World_size):
+        self.world_size=World_size
+        self.threadpool=deque([i for i in range(1,World_size,1)])
+        self.reqs=[]
+        self.node_req=[]
+        self.tag=[0]*World_size
+    def FinishAll(self):
+        for i in range(1,self.world_size,1):
+            #comm.isend(obj={'task':Finish,'id':-1},dest=i,tag=self.tag[i])
+            #print 'Finish i: '+str(i)+' in all : '+str(self.world_size)
+            self.run(-1,Finish)
+    def run(self,data_id,task):
+        if len(self.threadpool)==0:
+            idx=MPI.Request.Waitany(self.reqs)
+            node=self.node_req[idx]
+            self.threadpool.append(node)
+            del self.reqs[idx]
+            del self.node_req[idx]
+
+        cur=self.threadpool.popleft()
+        #print 'server send '+str(cur)+  ' ,task is :'+str(task)+' ,dataid is :'+str(data_id)
+        comm.send(obj={'task':task,'id':-1},dest=cur,tag=self.tag[cur])
+        self.tag[cur]=self.tag[cur]+1
+        if task==Start:
+            comm.send(obj={'task':-1,'id':data_id},dest=cur,tag=self.tag[cur])
+            self.tag[cur]=self.tag[cur]+1
+            self.reqs.append(comm.irecv(buf=None,source=cur,tag=self.tag[cur]))
+            self.tag[cur]=self.tag[cur]+1
+            self.node_req.append(cur)
+
+class Client:
+    def __init__(self,ImageDirBase_,OutputDir_,sensorFileDatabase_):
+        self.ImageDirBase=ImageDirBase_
+        self.OutputDir=OutputDir_
+        self.sensorFileDatabase=sensorFileDatabase_
+        self.tag=0
+    def run(self):
+        data=comm.recv(buf=None,source=SERVER_RANK,tag=self.tag)
+        task=data['task']
+        self.tag=self.tag+1
+        if task==Finish:
+            return False
+
+        data=comm.recv(buf=None,source=SERVER_RANK,tag=self.tag)
+        data_id=data['id']
+        self.tag=self.tag+1
+
+        #print 'client id is : '+str(comm_rank)+' ,task is :'+str(task)+'  ,dataid is :'+str(data['id'])
+
+        imageDir=self.ImageDirBase+'/'+str(data_id)
+
+        matchesDir=self.OutputDir+'/'+str(data_id)+'/matches'
+        reconstructionDir = self.OutputDir+'/'+str(data_id)+'/reconstruction_sequential'
+        mvsOutputDir=self.OutputDir+'/'+str(data_id)+'/mvs'
+        mvsWorkingDir=mvsOutputDir+'/intermediate'
+        sfm_data_path=reconstructionDir+'/sfm_data.json'
+
+        createFolder(self.OutputDir+'/'+str(data_id))
+        createFolder(matchesDir)
+        createFolder(reconstructionDir)
+        createFolder(mvsOutputDir)
+        createFolder(mvsWorkingDir)
+        #print str(comm_rank)+' deal pro :'+str(data_id)
+        #SFM
+        #print "SFM is start:"
+
+        #print ("\033[31m step 1 : before intrinsics analysis\033[00m " + time.asctime(time.localtime(time.time())))
+        #f.write("before intrinsics analysis \t\t" + time.asctime(time.localtime(time.time())) + '\n')
+        #print ("1. Intrinsics analysis")
+        pIntrisics = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_SfMInit_ImageListing"),  "-i", imageDir, "-o", matchesDir, "-d", self.sensorFileDatabase] )
+        pIntrisics.wait()
+
+        #print ("\033[31m step 2 : before compute features\033[00m " + time.asctime(time.localtime(time.time())))
+        #f.write("before compute features \t\t" + time.asctime(time.localtime(time.time())) + '\n')
+        #print ("2. Compute features")
+        pFeatures = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_ComputeFeatures"),  "-i", matchesDir+"/sfm_data.json", "-o", matchesDir, "-m", "SIFT", "-p", "HIGH"] )
+        pFeatures.wait()
+
+        #print ("\033[31m step 3 : before compute matches\033[00m " + time.asctime(time.localtime(time.time())))
+        #f.write("before compute matches \t\t\t" + time.asctime(time.localtime(time.time())) + '\n')
+        #print ("3. Compute matches")
+        pMatches = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_ComputeMatches"),  "-i", matchesDir+"/sfm_data.json", "-o", matchesDir] )
+        pMatches.wait()
+
+        #print ("\033[31m step 4 : before Incremental reconstruction\033[00m " + time.asctime(time.localtime(time.time())))
+        #f.write("before Incremental reconstruction \t" + time.asctime(time.localtime(time.time())) + '\n')
+        #print ("4. Do Sequential/Incremental reconstruction")
+        pRecons = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_IncrementalSfM"),  "-i", matchesDir+"/sfm_data.json", "-m", matchesDir, "-o", reconstructionDir, "-r", "1"] )
+        pRecons.wait()
+
+        '''
+        pRecons = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_ComputeSfM_DataColor"),  "-i", reconstructionDir+"/sfm_data.json", "-o", os.path.join(reconstructionDir,"colorized.ply")] )
+        pRecons.wait()
+
+        #print "after colorize structure " + time.asctime(time.localtime(time.time()))
+
+        # optional, compute final valid structure from the known camera poses
+        pRecons = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_ComputeStructureFromKnownPoses"),  "-i", reconstructionDir+"/sfm_data.json", "-m", matchesDir, "-f", os.path.join(matchesDir, "matches.f.txt"), "-o", os.path.join(reconstructionDir,"robust.json")] )
+        pRecons.wait()
+
+        pRecons = subprocess.Popen( [os.path.join(I23D_BIN, "i23dSFM_main_ComputeSfM_DataColor"),  "-i", reconstructionDir+"/robust.json", "-o", os.path.join(reconstructionDir,"robust_colorized.ply"), "-p", os.path.join(reconstructionDir,"photo_align.ply"), "-m", reconstructionDir] )
+        pRecons.wait()
+        '''
+
+        #print ("\033[31m finish time\033[00m " + time.asctime(time.localtime(time.time())))
+        #MVS
+        #print "MVS is start"
+<<<<<<< HEAD
+        
+=======
+        '''
+>>>>>>> bbd8f686d7b5468d551ad8439f48bff3e61736dd
+       # print ("1. Import Scene from SFM")
+        pImport = subprocess.Popen( [os.path.join(I23D_BIN, "InterfaceI23dSFM"), "-i", sfm_data_path, "-o", mvsOutputDir+"/scene.mvs", "-w", mvsWorkingDir] )
+        pImport.wait()
+
+        #print ("2. Dense Point-Cloud Reconstruction (optional)")
+        pPointRecon = subprocess.Popen( [os.path.join(I23D_BIN, "DensifyPointCloud"), "-i", mvsOutputDir+"/scene.mvs", "-w", mvsWorkingDir, "--estimate-normals", "1"] )
+        pPointRecon.wait()
+
+        #print ("3. Rough Mesh Reconstruction")
+        pMeshRecon = subprocess.Popen( [os.path.join(I23D_BIN, "ReconstructMesh"), "-i", mvsOutputDir+"/scene_dense.mvs", "-w", mvsWorkingDir] )
+        pMeshRecon.wait()
+
+        #print ("4. Mesh Refinement (optional)")
+        pMeshRefine = subprocess.Popen( [os.path.join(I23D_BIN, "RefineMesh"), "-i", mvsOutputDir+"/scene_dense_mesh.mvs", "-w", mvsWorkingDir, "--scales", "2", "--resolution-level", "2"] )
+        pMeshRefine.wait()
+
+        #print ("5. Mesh Texturing")
+        pTexture = subprocess.Popen( [os.path.join(I23D_BIN, "TextureMesh"), "-i", mvsOutputDir+"/scene_dense_mesh_refine.mvs", "-w", mvsWorkingDir, "--resolution-level", "1"] )
+        pTexture.wait()
+<<<<<<< HEAD
+        
+=======
+        '''
+>>>>>>> bbd8f686d7b5468d551ad8439f48bff3e61736dd
+        comm.send(obj=None,dest=SERVER_RANK,tag=self.tag)
+        self.tag=self.tag+1
+        return True
+
+
+server=Server(comm_size)
+client=Client(input_dir,output_dir,CAMERA_SENSOR_WIDTH_DIRECTORY)
+
+if comm_rank==SERVER_RANK:
+    createFolder(output_dir)
+
+comm.Barrier()
+
+if comm_rank==SERVER_RANK:
+    file_path = output_dir + "/timerecord.txt"
+    f=open(file_path,'w')
+<<<<<<< HEAD
+    startTime=time.time()
+    for i in range(0,nparts,1):
+        server.run(i,Start)
+    server.FinishAll()
+    endTime=time.time()
+=======
+    startTime=time.clock()
+    for i in range(0,nparts,1):
+        server.run(i,Start)
+    server.FinishAll()
+    endTime=time.clock()
+>>>>>>> bbd8f686d7b5468d551ad8439f48bff3e61736dd
+    cost = (int)(endTime-startTime)
+    f.write("Cost Time:"+str(cost/3600)+":"+str((cost%3600)/60)+":"+str(cost%60)+'\n')
+    f.close()
+    print "Finish All Tasks"
+else:
+    while True:
+        if client.run()==False:
+            #print 'Client '+str(comm_rank)+' is finished'
+            break
+

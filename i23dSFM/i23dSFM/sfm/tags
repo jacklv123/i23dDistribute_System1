@@ -1,0 +1,457 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALL	sfm_data_io.hpp	/^  ALL = VIEWS | EXTRINSICS | INTRINSICS | STRUCTURE | CONTROL_POINTS$/;"	e	enum:i23dSFM::sfm::ESfM_Data
+Adjust	pipelines/global/sfm_global_engine_relative_motions.cpp	/^bool GlobalSfMReconstructionEngine_RelativeMotions::Adjust()$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+Adjust	sfm_data_BA_ceres.cpp	/^bool Bundle_Adjustment_Ceres::Adjust($/;"	f	class:i23dSFM::sfm::Bundle_Adjustment_Ceres
+AutomaticInitialPairChoice	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::AutomaticInitialPairChoice(Pair & initial_pair) const$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+BA_options	sfm_data_BA_ceres.cpp	/^Bundle_Adjustment_Ceres::BA_options::BA_options(const bool bVerbose, bool bmultithreaded)$/;"	f	class:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+BA_options	sfm_data_BA_ceres.hpp	/^  struct BA_options$/;"	s	class:i23dSFM::sfm::Bundle_Adjustment_Ceres
+BundleAdjustment	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::BundleAdjustment()$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+Bundle_Adjustment	sfm_data_BA.hpp	/^class Bundle_Adjustment$/;"	c	namespace:i23dSFM::sfm
+Bundle_Adjustment_Ceres	sfm_data_BA_ceres.cpp	/^Bundle_Adjustment_Ceres::Bundle_Adjustment_Ceres($/;"	f	class:i23dSFM::sfm::Bundle_Adjustment_Ceres
+Bundle_Adjustment_Ceres	sfm_data_BA_ceres.hpp	/^class Bundle_Adjustment_Ceres : public Bundle_Adjustment$/;"	c	namespace:i23dSFM::sfm
+CONTROL_POINTS	sfm_data_io.hpp	/^  CONTROL_POINTS  = 0x16,$/;"	e	enum:i23dSFM::sfm::ESfM_Data
+ChooseInitialPair	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::ChooseInitialPair(Pair & initialPairIndex) const$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+ComputePutativeTranslation_EdgesCoverage	pipelines/global/GlobalSfM_translation_averaging.cpp	/^void GlobalSfM_Translation_AveragingSolver::ComputePutativeTranslation_EdgesCoverage($/;"	f	class:i23dSFM::sfm::GlobalSfM_Translation_AveragingSolver
+ComputeResidualsHistogram	pipelines/sequential/sequential_SfM.cpp	/^double SequentialSfMReconstructionEngine::ComputeResidualsHistogram(Histogram<double> * histo)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+Compute_Global_Rotations	pipelines/global/sfm_global_engine_relative_motions.cpp	/^bool GlobalSfMReconstructionEngine_RelativeMotions::Compute_Global_Rotations$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+Compute_Global_Translations	pipelines/global/sfm_global_engine_relative_motions.cpp	/^bool GlobalSfMReconstructionEngine_RelativeMotions::Compute_Global_Translations$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+Compute_Initial_Structure	pipelines/global/sfm_global_engine_relative_motions.cpp	/^bool GlobalSfMReconstructionEngine_RelativeMotions::Compute_Initial_Structure$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+Compute_Relative_Rotations	pipelines/global/sfm_global_engine_relative_motions.cpp	/^void GlobalSfMReconstructionEngine_RelativeMotions::Compute_Relative_Rotations$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+Compute_translations	pipelines/global/GlobalSfM_translation_averaging.cpp	/^void GlobalSfM_Translation_AveragingSolver::Compute_translations($/;"	f	class:i23dSFM::sfm::GlobalSfM_Translation_AveragingSolver
+ERelativeRotationInferenceMethod	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^enum ERelativeRotationInferenceMethod$/;"	g	namespace:i23dSFM::sfm
+ERotationAveragingMethod	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^enum ERotationAveragingMethod$/;"	g	namespace:i23dSFM::sfm
+ESfM_Data	sfm_data_io.hpp	/^enum ESfM_Data$/;"	g	namespace:i23dSFM::sfm
+ETranslationAveragingMethod	pipelines/global/GlobalSfM_translation_averaging.hpp	/^enum ETranslationAveragingMethod$/;"	g	namespace:i23dSFM::sfm
+EXTRINSICS	sfm_data_io.hpp	/^  EXTRINSICS      = 0x02,$/;"	e	enum:i23dSFM::sfm::ESfM_Data
+Error	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  double Error(size_t sample, const Model &model) const {$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+Error	pipelines/localization/SfM_Localizer.cpp	/^    static double Error(const Mat34 & P, const Vec2 & pt2D, const Vec3 & pt3D){$/;"	f	struct:i23dSFM::sfm::ResectionSquaredResidualError
+Errors	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  void Errors(const Model &model, std::vector<double> & vec_errors) const {$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+Estimate_T_triplet	pipelines/global/GlobalSfM_translation_averaging.cpp	/^bool GlobalSfM_Translation_AveragingSolver::Estimate_T_triplet($/;"	f	class:i23dSFM::sfm::GlobalSfM_Translation_AveragingSolver
+Features_Provider	pipelines/sfm_features_provider.hpp	/^struct Features_Provider$/;"	s	namespace:i23dSFM::sfm
+FindImagesWithPossibleResection	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::FindImagesWithPossibleResection($/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+Fit	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  void Fit(const std::vector<size_t> &samples, std::vector<Model> *models) const {$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+Frustum_Filter	sfm_data_filters_frustum.cpp	/^Frustum_Filter::Frustum_Filter(const SfM_Data & sfm_data,$/;"	f	class:i23dSFM::sfm::Frustum_Filter
+Frustum_Filter	sfm_data_filters_frustum.hpp	/^class Frustum_Filter$/;"	c	namespace:i23dSFM::sfm
+FrustumsT	sfm_data_filters_frustum.hpp	/^  typedef Hash_Map<IndexT, geometry::Frustum> FrustumsT;$/;"	t	class:i23dSFM::sfm::Frustum_Filter
+Generate_SfM_Report	sfm_report.hpp	/^static bool Generate_SfM_Report$/;"	f	namespace:i23dSFM::sfm
+GetControl_Points	sfm_data.hpp	/^  const Landmarks & GetControl_Points() const {return control_points;}$/;"	f	struct:i23dSFM::sfm::SfM_Data
+GetIntrinsics	sfm_data.hpp	/^  const Intrinsics & GetIntrinsics() const {return intrinsics;}$/;"	f	struct:i23dSFM::sfm::SfM_Data
+GetLandmarks	sfm_data.hpp	/^  const Landmarks & GetLandmarks() const {return structure;}$/;"	f	struct:i23dSFM::sfm::SfM_Data
+GetPoseOrDie	sfm_data.hpp	/^  const geometry::Pose3 GetPoseOrDie(const View * view) const$/;"	f	struct:i23dSFM::sfm::SfM_Data
+GetPoses	sfm_data.hpp	/^  const Poses & GetPoses() const {return poses;}$/;"	f	struct:i23dSFM::sfm::SfM_Data
+GetUsedPairs	pipelines/global/GlobalSfM_rotation_averaging.cpp	/^Pair_Set GlobalSfM_Rotation_AveragingSolver::GetUsedPairs() const$/;"	f	class:i23dSFM::sfm::GlobalSfM_Rotation_AveragingSolver
+GetViews	sfm_data.hpp	/^  const Views & GetViews() const {return views;}$/;"	f	struct:i23dSFM::sfm::SfM_Data
+Get_SfM_Data	pipelines/sfm_engine.hpp	/^  const SfM_Data & Get_SfM_Data() const {return _sfm_data;}$/;"	f	class:i23dSFM::sfm::ReconstructionEngine
+Get_Valid_Views	sfm_data_filters.hpp	/^static std::set<IndexT> Get_Valid_Views$/;"	f	namespace:i23dSFM::sfm
+Get_bFixedIntrinsics	pipelines/sfm_engine.hpp	/^  bool Get_bFixedIntrinsics() const {return _bFixedIntrinsics;}$/;"	f	class:i23dSFM::sfm::ReconstructionEngine
+GlobalSfMReconstructionEngine_RelativeMotions	pipelines/global/sfm_global_engine_relative_motions.cpp	/^GlobalSfMReconstructionEngine_RelativeMotions::GlobalSfMReconstructionEngine_RelativeMotions($/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+GlobalSfMReconstructionEngine_RelativeMotions	pipelines/global/sfm_global_engine_relative_motions.hpp	/^class GlobalSfMReconstructionEngine_RelativeMotions : public ReconstructionEngine$/;"	c	namespace:i23dSFM::sfm
+GlobalSfM_Rotation_AveragingSolver	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^class GlobalSfM_Rotation_AveragingSolver$/;"	c	namespace:i23dSFM::sfm
+GlobalSfM_Translation_AveragingSolver	pipelines/global/GlobalSfM_translation_averaging.hpp	/^class GlobalSfM_Translation_AveragingSolver$/;"	c	namespace:i23dSFM::sfm
+GroupSharedIntrinsics	sfm_data_utils.cpp	/^void GroupSharedIntrinsics(SfM_Data & sfm_data)$/;"	f	namespace:i23dSFM::sfm
+I23DSFM_GLOBAL_SFM_ENGINE_TRIPLET_T_ESTIMATOR_H	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	9;"	d
+I23DSFM_SFM_DATA_BA_CERES_CAMERA_FUNCTOR_HPP	sfm_data_BA_ceres_camera_functor.hpp	8;"	d
+I23DSFM_SFM_DATA_BA_CERES_HPP	sfm_data_BA_ceres.hpp	8;"	d
+I23DSFM_SFM_DATA_BA_HPP	sfm_data_BA.hpp	8;"	d
+I23DSFM_SFM_DATA_FILTERS_FRUSTUM_HPP	sfm_data_filters_frustum.hpp	9;"	d
+I23DSFM_SFM_DATA_FILTERS_HPP	sfm_data_filters.hpp	9;"	d
+I23DSFM_SFM_DATA_HPP	sfm_data.hpp	8;"	d
+I23DSFM_SFM_DATA_IO_BAF_HPP	sfm_data_io_baf.hpp	9;"	d
+I23DSFM_SFM_DATA_IO_CEREAL_HPP	sfm_data_io_cereal.hpp	10;"	d
+I23DSFM_SFM_DATA_IO_HPP	sfm_data_io.hpp	10;"	d
+I23DSFM_SFM_DATA_IO_PLY_HPP	sfm_data_io_ply.hpp	9;"	d
+I23DSFM_SFM_DATA_TRIANGULATION_HPP	sfm_data_triangulation.hpp	8;"	d
+I23DSFM_SFM_FEATURES_PROVIDER_HPP	pipelines/sfm_features_provider.hpp	9;"	d
+I23DSFM_SFM_FILTERS_HPP	sfm_filters.hpp	8;"	d
+I23DSFM_SFM_GLOBAL_ENGINE_PIPELINES_GLOBAL_ROTATION_AVERAGING_HPP	pipelines/global/GlobalSfM_rotation_averaging.hpp	9;"	d
+I23DSFM_SFM_GLOBAL_ENGINE_PIPELINES_GLOBAL_TRANSLATION_AVERAGING_HPP	pipelines/global/GlobalSfM_translation_averaging.hpp	9;"	d
+I23DSFM_SFM_GLOBAL_ENGINE_RELATIVE_MOTIONS_HPP	pipelines/global/sfm_global_engine_relative_motions.hpp	9;"	d
+I23DSFM_SFM_GLOBAL_REINDEX_HPP	pipelines/global/sfm_global_reindex.hpp	8;"	d
+I23DSFM_SFM_HPP	sfm.hpp	8;"	d
+I23DSFM_SFM_LANDMARK_HPP	sfm_landmark.hpp	8;"	d
+I23DSFM_SFM_MATCHES_PROVIDER_HPP	pipelines/sfm_matches_provider.hpp	9;"	d
+I23DSFM_SFM_REGIONS_PROVIDER_HPP	pipelines/sfm_regions_provider.hpp	9;"	d
+I23DSFM_SFM_REPORT_HPP	sfm_report.hpp	8;"	d
+I23DSFM_SFM_ROBUST_MODEL_ESTIMATION_HPP	pipelines/sfm_robust_model_estimation.hpp	9;"	d
+I23DSFM_SFM_VIEW_HPP	sfm_view.hpp	8;"	d
+INTRINSICS	sfm_data_io.hpp	/^  INTRINSICS      = 0x04,$/;"	e	enum:i23dSFM::sfm::ESfM_Data
+Image_Localizer_Match_Data	pipelines/localization/SfM_Localizer.hpp	/^struct Image_Localizer_Match_Data$/;"	s	namespace:i23dSFM::sfm
+Init	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.cpp	/^  SfM_Localization_Single_3DTrackObservation_Database::Init$/;"	f	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+InitLandmarkTracks	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::InitLandmarkTracks()$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+Intrinsics	sfm_data.hpp	/^typedef Hash_Map<IndexT, std::shared_ptr<cameras::IntrinsicBase> > Intrinsics;$/;"	t	namespace:i23dSFM::sfm
+IntrinsicsToCostFunction	sfm_data_BA_ceres.cpp	/^ceres::CostFunction * IntrinsicsToCostFunction(IntrinsicBase * intrinsic, const Vec2 & observation)$/;"	f	namespace:i23dSFM::sfm
+IsPoseAndIntrinsicDefined	sfm_data.hpp	/^  bool IsPoseAndIntrinsicDefined(const View * view) const$/;"	f	struct:i23dSFM::sfm::SfM_Data
+K_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const Mat3 Kinv_, K_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+KeepOnlyReferencedElement	sfm_filters.hpp	/^static void KeepOnlyReferencedElement($/;"	f	namespace:i23dSFM::sfm
+KeepOnlyReferencedElement	sfm_filters.hpp	/^void KeepOnlyReferencedElement($/;"	f	namespace:i23dSFM::sfm
+Kinv_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const Mat3 Kinv_, K_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+Landmark	sfm_landmark.hpp	/^struct Landmark$/;"	s	namespace:i23dSFM::sfm
+Landmarks	sfm_data.hpp	/^typedef Hash_Map<IndexT, Landmark> Landmarks;$/;"	t	namespace:i23dSFM::sfm
+Load	sfm_data_io.cpp	/^bool Load(SfM_Data & sfm_data, const std::string & filename, ESfM_Data flags_part)$/;"	f	namespace:i23dSFM::sfm
+Load_Cereal	sfm_data_io_cereal.hpp	/^bool Load_Cereal($/;"	f	namespace:i23dSFM::sfm
+Localize	pipelines/localization/SfM_Localizer.cpp	/^  bool SfM_Localizer::Localize$/;"	f	class:i23dSFM::sfm::SfM_Localizer
+Localize	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.cpp	/^  SfM_Localization_Single_3DTrackObservation_Database::Localize$/;"	f	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+MAX_MODELS	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  enum { MAX_MODELS = Solver::MAX_MODELS };$/;"	e	enum:i23dSFM::sfm::TranslationTripletKernel_ACRansac::__anon6
+MINIMUM_SAMPLES	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  enum { MINIMUM_SAMPLES = Solver::MINIMUM_SAMPLES };$/;"	e	enum:i23dSFM::sfm::TranslationTripletKernel_ACRansac::__anon5
+MakeInitialPair3D	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::MakeInitialPair3D(const Pair & current_pair)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+Matches_Provider	pipelines/sfm_matches_provider.hpp	/^struct Matches_Provider$/;"	s	namespace:i23dSFM::sfm
+Model	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  typedef ModelArg  Model;$/;"	t	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+MutexSet	pipelines/global/mutexSet.hpp	/^class MutexSet {$/;"	c	namespace:i23dSFM::sfm
+NearFarPlanesT	sfm_data_filters_frustum.hpp	/^  typedef Hash_Map<IndexT, std::pair<double, double> > NearFarPlanesT;$/;"	t	class:i23dSFM::sfm::Frustum_Filter
+NumSamples	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  size_t NumSamples() const {$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+OFFSET_DISTO_K1	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K1 = 3$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1::__anon2
+OFFSET_DISTO_K1	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K1 = 3,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_DISTO_K1	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K1 = 3,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3::__anon3
+OFFSET_DISTO_K2	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K2 = 4,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_DISTO_K2	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K2 = 4,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3::__anon3
+OFFSET_DISTO_K3	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K3 = 5,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_DISTO_K3	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_K3 = 5,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3::__anon3
+OFFSET_DISTO_T1	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_T1 = 6,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_DISTO_T2	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_DISTO_T2 = 7,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_FOCAL_LENGTH	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_FOCAL_LENGTH = 0,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic::__anon1
+OFFSET_FOCAL_LENGTH	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_FOCAL_LENGTH = 0,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_FOCAL_LENGTH	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_FOCAL_LENGTH = 0,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1::__anon2
+OFFSET_FOCAL_LENGTH	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_FOCAL_LENGTH = 0,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3::__anon3
+OFFSET_PRINCIPAL_POINT_X	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_X = 1,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic::__anon1
+OFFSET_PRINCIPAL_POINT_X	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_X = 1,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_PRINCIPAL_POINT_X	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_X = 1,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1::__anon2
+OFFSET_PRINCIPAL_POINT_X	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_X = 1,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3::__anon3
+OFFSET_PRINCIPAL_POINT_Y	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_Y = 2$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic::__anon1
+OFFSET_PRINCIPAL_POINT_Y	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_Y = 2,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2::__anon4
+OFFSET_PRINCIPAL_POINT_Y	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_Y = 2,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1::__anon2
+OFFSET_PRINCIPAL_POINT_Y	sfm_data_BA_ceres_camera_functor.hpp	/^    OFFSET_PRINCIPAL_POINT_Y = 2,$/;"	e	enum:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3::__anon3
+Observation	sfm_landmark.hpp	/^  Observation():id_feat(UndefinedIndexT) {  }$/;"	f	struct:i23dSFM::sfm::Observation
+Observation	sfm_landmark.hpp	/^  Observation(const Vec2 & p, IndexT idFeat): x(p), id_feat(idFeat) {}$/;"	f	struct:i23dSFM::sfm::Observation
+Observation	sfm_landmark.hpp	/^struct Observation$/;"	s	namespace:i23dSFM::sfm
+Observations	sfm_landmark.hpp	/^typedef Hash_Map<IndexT, Observation> Observations;$/;"	t	namespace:i23dSFM::sfm
+Pair_filter	sfm_data_filters.hpp	/^static Pair_Set Pair_filter$/;"	f	namespace:i23dSFM::sfm
+PointsToMat	pipelines/structure_from_known_poses/structure_estimator.cpp	/^static void PointsToMat($/;"	f	namespace:i23dSFM::sfm
+Poses	sfm_data.hpp	/^typedef Hash_Map<IndexT, geometry::Pose3> Poses;$/;"	t	namespace:i23dSFM::sfm
+Process	pipelines/global/sfm_global_engine_relative_motions.cpp	/^bool GlobalSfMReconstructionEngine_RelativeMotions::Process() {$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+Process	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::Process() {$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+RMSE	pipelines/pipelines_test.hpp	/^static double RMSE(const SfM_Data & sfm_data)$/;"	f
+RMSE	sfm_data_BA_test.cpp	/^double RMSE(const SfM_Data & sfm_data)$/;"	f
+ROTATION_AVERAGING_L1	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^  ROTATION_AVERAGING_L1 = 1,$/;"	e	enum:i23dSFM::sfm::ERotationAveragingMethod
+ROTATION_AVERAGING_L2	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^  ROTATION_AVERAGING_L2 = 2$/;"	e	enum:i23dSFM::sfm::ERotationAveragingMethod
+ReconstructionEngine	pipelines/sfm_engine.hpp	/^  ReconstructionEngine($/;"	f	class:i23dSFM::sfm::ReconstructionEngine
+ReconstructionEngine	pipelines/sfm_engine.hpp	/^class ReconstructionEngine$/;"	c	namespace:i23dSFM::sfm
+RefinePose	pipelines/localization/SfM_Localizer.cpp	/^  bool SfM_Localizer::RefinePose$/;"	f	class:i23dSFM::sfm::SfM_Localizer
+Regions_Provider	pipelines/sfm_regions_provider.hpp	/^struct Regions_Provider$/;"	s	namespace:i23dSFM::sfm
+RelativePose_Info	pipelines/sfm_robust_model_estimation.hpp	/^  RelativePose_Info()$/;"	f	struct:i23dSFM::sfm::RelativePose_Info
+RelativePose_Info	pipelines/sfm_robust_model_estimation.hpp	/^struct RelativePose_Info$/;"	s	namespace:i23dSFM::sfm
+RemoveOutliers_AngleError	sfm_data_filters.hpp	/^static IndexT RemoveOutliers_AngleError$/;"	f	namespace:i23dSFM::sfm
+RemoveOutliers_PixelResidualError	sfm_data_filters.hpp	/^static IndexT RemoveOutliers_PixelResidualError$/;"	f	namespace:i23dSFM::sfm
+Resection	pipelines/sequential/sequential_SfM.cpp	/^bool SequentialSfMReconstructionEngine::Resection(const size_t viewIndex)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+ResectionSquaredResidualError	pipelines/localization/SfM_Localizer.cpp	/^  struct ResectionSquaredResidualError {$/;"	s	namespace:i23dSFM::sfm	file:
+ResidualErrorFunctor_Pinhole_Intrinsic	sfm_data_BA_ceres_camera_functor.hpp	/^  ResidualErrorFunctor_Pinhole_Intrinsic(const double* const pos_2dpoint)$/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic
+ResidualErrorFunctor_Pinhole_Intrinsic	sfm_data_BA_ceres_camera_functor.hpp	/^struct ResidualErrorFunctor_Pinhole_Intrinsic$/;"	s	namespace:i23dSFM::sfm
+ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2	sfm_data_BA_ceres_camera_functor.hpp	/^  ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2(const double* const pos_2dpoint)$/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2
+ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2	sfm_data_BA_ceres_camera_functor.hpp	/^struct ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2$/;"	s	namespace:i23dSFM::sfm
+ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1	sfm_data_BA_ceres_camera_functor.hpp	/^  ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1(const double* const pos_2dpoint)$/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1
+ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1	sfm_data_BA_ceres_camera_functor.hpp	/^struct ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1$/;"	s	namespace:i23dSFM::sfm
+ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3	sfm_data_BA_ceres_camera_functor.hpp	/^  ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3(const double* const pos_2dpoint)$/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3
+ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3	sfm_data_BA_ceres_camera_functor.hpp	/^struct ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3$/;"	s	namespace:i23dSFM::sfm
+Run	pipelines/global/GlobalSfM_rotation_averaging.cpp	/^bool GlobalSfM_Rotation_AveragingSolver::Run($/;"	f	class:i23dSFM::sfm::GlobalSfM_Rotation_AveragingSolver
+Run	pipelines/global/GlobalSfM_translation_averaging.cpp	/^bool GlobalSfM_Translation_AveragingSolver::Run($/;"	f	class:i23dSFM::sfm::GlobalSfM_Translation_AveragingSolver
+STRUCTURE	sfm_data_io.hpp	/^  STRUCTURE       = 0x08,$/;"	e	enum:i23dSFM::sfm::ESfM_Data
+Save	sfm_data_io.cpp	/^bool Save(const SfM_Data & sfm_data, const std::string & filename, ESfM_Data flags_part)$/;"	f	namespace:i23dSFM::sfm
+Save_BAF	sfm_data_io_baf.hpp	/^static bool Save_BAF($/;"	f	namespace:i23dSFM::sfm
+Save_Cereal	sfm_data_io_cereal.hpp	/^bool Save_Cereal($/;"	f	namespace:i23dSFM::sfm
+Save_PLY	sfm_data_io_ply.hpp	/^static bool Save_PLY($/;"	f	namespace:i23dSFM::sfm
+SequentialSfMReconstructionEngine	pipelines/sequential/sequential_SfM.cpp	/^SequentialSfMReconstructionEngine::SequentialSfMReconstructionEngine($/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+SequentialSfMReconstructionEngine	pipelines/sequential/sequential_SfM.hpp	/^class SequentialSfMReconstructionEngine : public ReconstructionEngine$/;"	c	namespace:i23dSFM::sfm
+SetFeaturesProvider	pipelines/global/sfm_global_engine_relative_motions.cpp	/^void GlobalSfMReconstructionEngine_RelativeMotions::SetFeaturesProvider(Features_Provider * provider)$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+SetFeaturesProvider	pipelines/sequential/sequential_SfM.cpp	/^void SequentialSfMReconstructionEngine::SetFeaturesProvider(Features_Provider * provider)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+SetMatchesProvider	pipelines/global/sfm_global_engine_relative_motions.cpp	/^void GlobalSfMReconstructionEngine_RelativeMotions::SetMatchesProvider(Matches_Provider * provider)$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+SetMatchesProvider	pipelines/sequential/sequential_SfM.cpp	/^void SequentialSfMReconstructionEngine::SetMatchesProvider(Matches_Provider * provider)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+SetRotationAveragingMethod	pipelines/global/sfm_global_engine_relative_motions.cpp	/^void GlobalSfMReconstructionEngine_RelativeMotions::SetRotationAveragingMethod$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+SetTranslationAveragingMethod	pipelines/global/sfm_global_engine_relative_motions.cpp	/^void GlobalSfMReconstructionEngine_RelativeMotions::SetTranslationAveragingMethod$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+SetUnknownCameraType	pipelines/sequential/sequential_SfM.hpp	/^  void SetUnknownCameraType(const cameras::EINTRINSIC camType)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+Set_bFixedIntrinsics	pipelines/sfm_engine.hpp	/^  void Set_bFixedIntrinsics(bool bVal) {_bFixedIntrinsics = bVal;}$/;"	f	class:i23dSFM::sfm::ReconstructionEngine
+SfM_Data	sfm_data.hpp	/^struct SfM_Data$/;"	s	namespace:i23dSFM::sfm
+SfM_Data_Structure_Computation_Basis	sfm_data_triangulation.cpp	/^SfM_Data_Structure_Computation_Basis::SfM_Data_Structure_Computation_Basis(bool bConsoleVerbose)$/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Basis
+SfM_Data_Structure_Computation_Basis	sfm_data_triangulation.hpp	/^struct SfM_Data_Structure_Computation_Basis$/;"	s	namespace:i23dSFM::sfm
+SfM_Data_Structure_Computation_Blind	sfm_data_triangulation.cpp	/^SfM_Data_Structure_Computation_Blind::SfM_Data_Structure_Computation_Blind(bool bConsoleVerbose)$/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Blind
+SfM_Data_Structure_Computation_Blind	sfm_data_triangulation.hpp	/^struct SfM_Data_Structure_Computation_Blind: public SfM_Data_Structure_Computation_Basis$/;"	s	namespace:i23dSFM::sfm
+SfM_Data_Structure_Computation_Robust	sfm_data_triangulation.cpp	/^SfM_Data_Structure_Computation_Robust::SfM_Data_Structure_Computation_Robust(bool bConsoleVerbose)$/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Robust
+SfM_Data_Structure_Computation_Robust	sfm_data_triangulation.hpp	/^struct SfM_Data_Structure_Computation_Robust: public SfM_Data_Structure_Computation_Basis$/;"	s	namespace:i23dSFM::sfm
+SfM_Data_Structure_Estimation_From_Known_Poses	pipelines/structure_from_known_poses/structure_estimator.hpp	/^class SfM_Data_Structure_Estimation_From_Known_Poses$/;"	c	namespace:i23dSFM::sfm
+SfM_Localization_Single_3DTrackObservation_Database	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.cpp	/^  SfM_Localization_Single_3DTrackObservation_Database()$/;"	f	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+SfM_Localization_Single_3DTrackObservation_Database	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^class SfM_Localization_Single_3DTrackObservation_Database : public SfM_Localizer$/;"	c	namespace:i23dSFM::sfm
+SfM_Localizer	pipelines/localization/SfM_Localizer.hpp	/^class SfM_Localizer$/;"	c	namespace:i23dSFM::sfm
+Solver	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  typedef SolverArg Solver;$/;"	t	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+Synthetic_Features_Provider	pipelines/pipelines_test.hpp	/^struct Synthetic_Features_Provider : public Features_Provider$/;"	s
+Synthetic_Matches_Provider	pipelines/pipelines_test.hpp	/^struct Synthetic_Matches_Provider : public Matches_Provider$/;"	s
+TEST	pipelines/global/global_SfM_test.cpp	/^TEST(GLOBAL_SFM, RotationAveragingL1_TranslationAveragingL1) {$/;"	f
+TEST	pipelines/global/global_SfM_test.cpp	/^TEST(GLOBAL_SFM, RotationAveragingL2_TranslationAveragingL1) {$/;"	f
+TEST	pipelines/global/global_SfM_test.cpp	/^TEST(GLOBAL_SFM, RotationAveragingL2_TranslationAveragingL2_Chordal) {$/;"	f
+TEST	pipelines/global/global_SfM_test.cpp	/^TEST(GLOBAL_SFM, RotationAveragingL2_TranslationAveragingSoftL1) {$/;"	f
+TEST	pipelines/sequential/sequential_SfM_test.cpp	/^TEST(SEQUENTIAL_SFM, Known_Intrinsics) {$/;"	f
+TEST	pipelines/sequential/sequential_SfM_test.cpp	/^TEST(SEQUENTIAL_SFM, Partially_Known_Intrinsics) {$/;"	f
+TEST	sfm_data_BA_test.cpp	/^TEST(BUNDLE_ADJUSTMENT, EffectiveMinimization_Pinhole) {$/;"	f
+TEST	sfm_data_BA_test.cpp	/^TEST(BUNDLE_ADJUSTMENT, EffectiveMinimization_Pinhole_Intrinsic_Brown_T2) {$/;"	f
+TEST	sfm_data_BA_test.cpp	/^TEST(BUNDLE_ADJUSTMENT, EffectiveMinimization_Pinhole_Radial_K1) {$/;"	f
+TEST	sfm_data_BA_test.cpp	/^TEST(BUNDLE_ADJUSTMENT, EffectiveMinimization_Pinhole_Radial_K3) {$/;"	f
+TEST	sfm_data_io_test.cpp	/^TEST(SfM_Data_IO, SAVE_LOAD_JSON) {$/;"	f
+TEST	sfm_data_io_test.cpp	/^TEST(SfM_Data_IO, SAVE_PLY) {$/;"	f
+TEST	sfm_data_utils_test.cpp	/^TEST(SfM_Data_IntrinsicGrouping, Empty)$/;"	f
+TEST	sfm_data_utils_test.cpp	/^TEST(SfM_Data_IntrinsicGrouping, Grouping_One)$/;"	f
+TEST	sfm_data_utils_test.cpp	/^TEST(SfM_Data_IntrinsicGrouping, Grouping_Two)$/;"	f
+TEST	sfm_data_utils_test.cpp	/^TEST(SfM_Data_IntrinsicGrouping, Grouping_Two_Different_Camera_Type)$/;"	f
+TEST	sfm_data_utils_test.cpp	/^TEST(SfM_Data_IntrinsicGrouping, No_Grouping)$/;"	f
+TRANSLATION_AVERAGING_L1	pipelines/global/GlobalSfM_translation_averaging.hpp	/^  TRANSLATION_AVERAGING_L1 = 1,$/;"	e	enum:i23dSFM::sfm::ETranslationAveragingMethod
+TRANSLATION_AVERAGING_L2_DISTANCE_CHORDAL	pipelines/global/GlobalSfM_translation_averaging.hpp	/^  TRANSLATION_AVERAGING_L2_DISTANCE_CHORDAL = 2,$/;"	e	enum:i23dSFM::sfm::ETranslationAveragingMethod
+TRANSLATION_AVERAGING_SOFTL1	pipelines/global/GlobalSfM_translation_averaging.hpp	/^  TRANSLATION_AVERAGING_SOFTL1 = 3$/;"	e	enum:i23dSFM::sfm::ETranslationAveragingMethod
+TRIPLET_ROTATION_INFERENCE_COMPOSITION_ERROR	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^  TRIPLET_ROTATION_INFERENCE_COMPOSITION_ERROR = 1$/;"	e	enum:i23dSFM::sfm::ERelativeRotationInferenceMethod
+TRIPLET_ROTATION_INFERENCE_NONE	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^  TRIPLET_ROTATION_INFERENCE_NONE = 0,$/;"	e	enum:i23dSFM::sfm::ERelativeRotationInferenceMethod
+ThresholdUpperBound_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const double ThresholdUpperBound_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+TranslationTripletKernel_ACRansac	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  TranslationTripletKernel_ACRansac($/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+TranslationTripletKernel_ACRansac	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^class TranslationTripletKernel_ACRansac$/;"	c	namespace:i23dSFM::sfm
+Translation_averaging	pipelines/global/GlobalSfM_translation_averaging.cpp	/^bool GlobalSfM_Translation_AveragingSolver::Translation_averaging($/;"	f	class:i23dSFM::sfm::GlobalSfM_Translation_AveragingSolver
+TripletRotationRejection	pipelines/global/GlobalSfM_rotation_averaging.cpp	/^void GlobalSfM_Rotation_AveragingSolver::TripletRotationRejection($/;"	f	class:i23dSFM::sfm::GlobalSfM_Rotation_AveragingSolver
+Unnormalize	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  void Unnormalize(Model * model) const {$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+VIEWS	sfm_data_io.hpp	/^  VIEWS           = 0x01,$/;"	e	enum:i23dSFM::sfm::ESfM_Data
+ValidIds	sfm_data_io.cpp	/^bool ValidIds(const SfM_Data & sfm_data, ESfM_Data flags_part)$/;"	f	namespace:i23dSFM::sfm
+View	sfm_view.hpp	/^  View($/;"	f	struct:i23dSFM::sfm::View
+View	sfm_view.hpp	/^struct View$/;"	s	namespace:i23dSFM::sfm
+Views	sfm_data.hpp	/^typedef Hash_Map<IndexT, std::shared_ptr<View> > Views;$/;"	t	namespace:i23dSFM::sfm
+X	sfm_landmark.hpp	/^  Vec3 X;$/;"	m	struct:i23dSFM::sfm::Landmark
+_bCeres_Summary	sfm_data_BA_ceres.hpp	/^    bool _bCeres_Summary;$/;"	m	struct:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+_bConsoleVerbose	sfm_data_triangulation.hpp	/^  bool _bConsoleVerbose;$/;"	m	struct:i23dSFM::sfm::SfM_Data_Structure_Computation_Basis
+_bFixedIntrinsics	pipelines/sfm_engine.hpp	/^  bool _bFixedIntrinsics;$/;"	m	class:i23dSFM::sfm::ReconstructionEngine
+_bTruncated	sfm_data_filters_frustum.hpp	/^  bool _bTruncated; \/\/ Tell if we use truncated or infinite frustum$/;"	m	class:i23dSFM::sfm::Frustum_Filter
+_bVerbose	sfm_data_BA_ceres.hpp	/^    bool _bVerbose;$/;"	m	struct:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+_camType	pipelines/sequential/sequential_SfM.hpp	/^  cameras::EINTRINSIC _camType; \/\/ The camera type for the unknown cameras$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_eRotationAveragingMethod	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  ERotationAveragingMethod _eRotationAveragingMethod;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_eTranslationAveragingMethod	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  ETranslationAveragingMethod _eTranslationAveragingMethod;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_features_provider	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  Features_Provider  * _features_provider;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_features_provider	pipelines/sequential/sequential_SfM.hpp	/^  Features_Provider  * _features_provider;$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_htmlDocStream	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  std::shared_ptr<htmlDocument::htmlDocumentStream> _htmlDocStream;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_htmlDocStream	pipelines/sequential/sequential_SfM.hpp	/^  std::shared_ptr<htmlDocument::htmlDocumentStream> _htmlDocStream;$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_i23dSFM_options	sfm_data_BA_ceres.hpp	/^    BA_options _i23dSFM_options;$/;"	m	class:i23dSFM::sfm::Bundle_Adjustment_Ceres
+_initialpair	pipelines/sequential/sequential_SfM.hpp	/^  Pair _initialpair;$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_linear_solver_type	sfm_data_BA_ceres.hpp	/^    ceres::LinearSolverType _linear_solver_type;$/;"	m	struct:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+_map_ACThreshold	pipelines/sequential/sequential_SfM.hpp	/^  Hash_Map<IndexT, double> _map_ACThreshold; \/\/ Per camera confidence (A contrario estimated threshold error)$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_map_tracks	pipelines/sequential/sequential_SfM.hpp	/^  i23dSFM::tracks::STLMAPTracks _map_tracks; \/\/ putative landmark tracks (visibility per 3D point)$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_matches_provider	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  Matches_Provider  * _matches_provider;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_matches_provider	pipelines/sequential/sequential_SfM.hpp	/^  Matches_Provider  * _matches_provider;$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_nbThreads	sfm_data_BA_ceres.hpp	/^    unsigned int _nbThreads;$/;"	m	struct:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+_normalized_features_provider	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  std::shared_ptr<Features_Provider> _normalized_features_provider;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_pairWise_matches	pipelines/sfm_matches_provider.hpp	/^  matching::PairWiseMatches _pairWise_matches;$/;"	m	struct:i23dSFM::sfm::Matches_Provider
+_preconditioner_type	sfm_data_BA_ceres.hpp	/^    ceres::PreconditionerType _preconditioner_type;$/;"	m	struct:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+_sLoggingFile	pipelines/global/sfm_global_engine_relative_motions.hpp	/^  std::string _sLoggingFile;$/;"	m	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+_sLoggingFile	pipelines/sequential/sequential_SfM.hpp	/^  std::string _sLoggingFile;$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_sOutDirectory	pipelines/sfm_engine.hpp	/^  std::string _sOutDirectory; \/\/ Output path where outputs will be stored$/;"	m	class:i23dSFM::sfm::ReconstructionEngine
+_set_remainingViewId	pipelines/sequential/sequential_SfM.hpp	/^  std::set<size_t> _set_remainingViewId;     \/\/ Remaining camera index that can be used for resection$/;"	m	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+_sfm_data	pipelines/sfm_engine.hpp	/^  SfM_Data _sfm_data; \/\/ internal SfM_Data$/;"	m	class:i23dSFM::sfm::ReconstructionEngine
+_sparse_linear_algebra_library_type	sfm_data_BA_ceres.hpp	/^    ceres::SparseLinearAlgebraLibraryType _sparse_linear_algebra_library_type;$/;"	m	struct:i23dSFM::sfm::Bundle_Adjustment_Ceres::BA_options
+_vec_initialRijTijEstimates	pipelines/global/GlobalSfM_translation_averaging.hpp	/^  RelativeInfo_Vec _vec_initialRijTijEstimates;$/;"	m	class:i23dSFM::sfm::GlobalSfM_Translation_AveragingSolver
+badTrackRejector	pipelines/sequential/sequential_SfM.cpp	/^size_t SequentialSfMReconstructionEngine::badTrackRejector(double dPrecision, size_t count)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+control_points	sfm_data.hpp	/^  Landmarks control_points;$/;"	m	struct:i23dSFM::sfm::SfM_Data
+count	pipelines/global/mutexSet.hpp	/^    int count(const T & value) const {$/;"	f	class:i23dSFM::sfm::MutexSet
+create_test_scene	sfm_data_io_test.cpp	/^SfM_Data create_test_scene(IndexT viewsCount, bool bSharedIntrinsic)$/;"	f
+epipole_from_P	pipelines/structure_from_known_poses/structure_estimator.cpp	/^static Vec3 epipole_from_P(const Mat34& P1, const Pose3& P2)$/;"	f	namespace:i23dSFM::sfm
+eraseMissingPoses	sfm_data_filters.hpp	/^static bool eraseMissingPoses(SfM_Data & sfm_data, const IndexT min_points_per_pose)$/;"	f	namespace:i23dSFM::sfm
+eraseObservationsWithMissingPoses	sfm_data_filters.hpp	/^static bool eraseObservationsWithMissingPoses(SfM_Data & sfm_data, const IndexT min_points_per_landmark)$/;"	f	namespace:i23dSFM::sfm
+eraseUnstablePosesAndObservations	sfm_data_filters.hpp	/^static bool eraseUnstablePosesAndObservations($/;"	f	namespace:i23dSFM::sfm
+error_max	pipelines/localization/SfM_Localizer.hpp	/^  double error_max = std::numeric_limits<double>::infinity();$/;"	m	struct:i23dSFM::sfm::Image_Localizer_Match_Data
+essential_matrix	pipelines/sfm_robust_model_estimation.hpp	/^  Mat3 essential_matrix;$/;"	m	struct:i23dSFM::sfm::RelativePose_Info
+estimate_Rt_fromE	pipelines/sfm_robust_model_estimation.cpp	/^bool estimate_Rt_fromE(const Mat3 & K1, const Mat3 & K2,$/;"	f	namespace:i23dSFM::sfm
+export_Ply	sfm_data_filters_frustum.cpp	/^bool Frustum_Filter::export_Ply(const std::string & filename) const$/;"	f	class:i23dSFM::sfm::Frustum_Filter
+feats_per_view	pipelines/sfm_features_provider.hpp	/^  Hash_Map<IndexT, features::PointFeatures> feats_per_view;$/;"	m	struct:i23dSFM::sfm::Features_Provider
+filter	pipelines/structure_from_known_poses/structure_estimator.cpp	/^void SfM_Data_Structure_Estimation_From_Known_Poses::filter($/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Estimation_From_Known_Poses
+found_residual_precision	pipelines/sfm_robust_model_estimation.hpp	/^  double found_residual_precision;$/;"	m	struct:i23dSFM::sfm::RelativePose_Info
+frustum_perView	sfm_data_filters_frustum.hpp	/^  FrustumsT frustum_perView; \/\/ Frustum for the valid view (defined pose+intrinsic)$/;"	m	class:i23dSFM::sfm::Frustum_Filter
+getFeatures	pipelines/sfm_features_provider.hpp	/^  const features::PointFeatures & getFeatures(const IndexT & id_view) const$/;"	f	struct:i23dSFM::sfm::Features_Provider
+getFrustumIntersectionPairs	sfm_data_filters_frustum.cpp	/^Pair_Set Frustum_Filter::getFrustumIntersectionPairs() const$/;"	f	class:i23dSFM::sfm::Frustum_Filter
+getIndexes	sfm_filters.hpp	/^static std::set<IndexT> getIndexes(const IterableIndexTSequence & seq)$/;"	f	namespace:i23dSFM::sfm
+getInputScene	pipelines/pipelines_test.hpp	/^SfM_Data getInputScene$/;"	f
+getInputScene	sfm_data_BA_test.cpp	/^SfM_Data getInputScene(const NViewDataSet & d, const nViewDatasetConfigurator & config, EINTRINSIC eintrinsic)$/;"	f
+getPairs	pipelines/sfm_matches_provider.hpp	/^  virtual Pair_Set getPairs() const$/;"	f	struct:i23dSFM::sfm::Matches_Provider
+i23dSFM	pipelines/global/GlobalSfM_rotation_averaging.cpp	/^namespace i23dSFM{$/;"	n	file:
+i23dSFM	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^namespace i23dSFM{$/;"	n
+i23dSFM	pipelines/global/GlobalSfM_translation_averaging.cpp	/^namespace i23dSFM{$/;"	n	file:
+i23dSFM	pipelines/global/GlobalSfM_translation_averaging.hpp	/^namespace i23dSFM{$/;"	n
+i23dSFM	pipelines/global/mutexSet.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/global/sfm_global_engine_relative_motions.cpp	/^namespace i23dSFM{$/;"	n	file:
+i23dSFM	pipelines/global/sfm_global_engine_relative_motions.hpp	/^namespace i23dSFM{$/;"	n
+i23dSFM	pipelines/global/sfm_global_reindex.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^namespace i23dSFM{$/;"	n
+i23dSFM	pipelines/localization/SfM_Localizer.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	pipelines/localization/SfM_Localizer.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/sequential/sequential_SfM.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	pipelines/sequential/sequential_SfM.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/sfm_engine.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/sfm_features_provider.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/sfm_matches_provider.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/sfm_regions_provider.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/sfm_robust_model_estimation.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	pipelines/sfm_robust_model_estimation.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	pipelines/structure_from_known_poses/structure_estimator.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	pipelines/structure_from_known_poses/structure_estimator.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_BA.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_BA_ceres.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	sfm_data_BA_ceres.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_BA_ceres_camera_functor.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_filters.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_filters_frustum.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	sfm_data_filters_frustum.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_io.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	sfm_data_io.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_io_baf.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_io_cereal.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_io_ply.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_triangulation.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	sfm_data_triangulation.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_data_utils.cpp	/^namespace i23dSFM {$/;"	n	file:
+i23dSFM	sfm_data_utils.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_filters.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_landmark.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_report.hpp	/^namespace i23dSFM {$/;"	n
+i23dSFM	sfm_view.hpp	/^namespace i23dSFM {$/;"	n
+id_feat	sfm_landmark.hpp	/^  IndexT id_feat;$/;"	m	struct:i23dSFM::sfm::Observation
+id_intrinsic	sfm_view.hpp	/^  IndexT id_intrinsic, id_pose;$/;"	m	struct:i23dSFM::sfm::View
+id_pose	sfm_view.hpp	/^  IndexT id_intrinsic, id_pose;$/;"	m	struct:i23dSFM::sfm::View
+id_view	sfm_view.hpp	/^  IndexT id_view;$/;"	m	struct:i23dSFM::sfm::View
+index_to_landmark_id_	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^  std::vector<IndexT> index_to_landmark_id_;$/;"	m	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+initFrustum	sfm_data_filters_frustum.cpp	/^void Frustum_Filter::initFrustum(const SfM_Data & sfm_data)$/;"	f	class:i23dSFM::sfm::Frustum_Filter
+init_z_near_z_far_depth	sfm_data_filters_frustum.cpp	/^void Frustum_Filter::init_z_near_z_far_depth(const SfM_Data & sfm_data,$/;"	f	class:i23dSFM::sfm::Frustum_Filter
+initial_residual_tolerance	pipelines/sfm_robust_model_estimation.hpp	/^  double initial_residual_tolerance;$/;"	m	struct:i23dSFM::sfm::RelativePose_Info
+insert	pipelines/global/mutexSet.hpp	/^    void insert(const T & value) {$/;"	f	class:i23dSFM::sfm::MutexSet
+intrinsics	sfm_data.hpp	/^  Intrinsics intrinsics;$/;"	m	struct:i23dSFM::sfm::SfM_Data
+landmark_observations_descriptors_	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^  std::unique_ptr<features::Regions> landmark_observations_descriptors_;$/;"	m	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+load	pipelines/pipelines_test.hpp	/^  bool load($/;"	f	struct:Synthetic_Features_Provider
+load	pipelines/pipelines_test.hpp	/^  virtual bool load($/;"	f	struct:Synthetic_Matches_Provider
+load	pipelines/sfm_features_provider.hpp	/^  virtual bool load($/;"	f	struct:i23dSFM::sfm::Features_Provider
+load	pipelines/sfm_matches_provider.hpp	/^  virtual bool load(const SfM_Data & sfm_data, const std::string & matchesfile)$/;"	f	struct:i23dSFM::sfm::Matches_Provider
+load	pipelines/sfm_regions_provider.hpp	/^  virtual bool load($/;"	f	struct:i23dSFM::sfm::Regions_Provider
+load	sfm_landmark.hpp	/^  void load( Archive & ar)$/;"	f	struct:i23dSFM::sfm::Landmark
+load	sfm_landmark.hpp	/^  void load( Archive & ar)$/;"	f	struct:i23dSFM::sfm::Observation
+lock_guardT	pipelines/global/mutexSet.hpp	/^typedef std::lock_guard<mutexT> lock_guardT;$/;"	t
+lock_guardT	pipelines/global/mutexSet.hpp	/^typedef tthread::lock_guard<mutexT> lock_guardT;$/;"	t
+logalpha0	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  double logalpha0() const {return logalpha0_;}$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+logalpha0_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const double logalpha0_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+m_Mutex	pipelines/global/mutexSet.hpp	/^    mutable mutexT m_Mutex;$/;"	m	class:i23dSFM::sfm::MutexSet
+m_Set	pipelines/global/mutexSet.hpp	/^    std::set<T> m_Set;$/;"	m	class:i23dSFM::sfm::MutexSet
+m_pos_2dpoint	sfm_data_BA_ceres_camera_functor.hpp	/^  double m_pos_2dpoint[2]; \/\/ The 2D observation$/;"	m	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic
+m_pos_2dpoint	sfm_data_BA_ceres_camera_functor.hpp	/^  double m_pos_2dpoint[2]; \/\/ The 2D observation$/;"	m	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2
+m_pos_2dpoint	sfm_data_BA_ceres_camera_functor.hpp	/^  double m_pos_2dpoint[2]; \/\/ The 2D observation$/;"	m	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1
+m_pos_2dpoint	sfm_data_BA_ceres_camera_functor.hpp	/^  double m_pos_2dpoint[2]; \/\/ The 2D observation$/;"	m	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3
+main	pipelines/global/global_SfM_test.cpp	/^int main() { TestResult tr; return TestRegistry::runAllTests(tr);}$/;"	f
+main	pipelines/sequential/sequential_SfM_test.cpp	/^int main() { TestResult tr; return TestRegistry::runAllTests(tr);}$/;"	f
+main	sfm_data_BA_test.cpp	/^int main() { TestResult tr; return TestRegistry::runAllTests(tr);}$/;"	f
+main	sfm_data_io_test.cpp	/^int main() { TestResult tr; return TestRegistry::runAllTests(tr);}$/;"	f
+main	sfm_data_utils_test.cpp	/^int main() { TestResult tr; return TestRegistry::runAllTests(tr); }$/;"	f
+match	pipelines/structure_from_known_poses/structure_estimator.cpp	/^void SfM_Data_Structure_Estimation_From_Known_Poses::match($/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Estimation_From_Known_Poses
+matching_interface_	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^  std::unique_ptr<matching::Matcher_Regions_Database> matching_interface_;$/;"	m	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+max_iteration	pipelines/localization/SfM_Localizer.hpp	/^  size_t max_iteration = 4096;$/;"	m	struct:i23dSFM::sfm::Image_Localizer_Match_Data
+multError	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  double multError() const {return 1.0;}$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+mutexT	pipelines/global/mutexSet.hpp	/^typedef std::mutex mutexT;$/;"	t
+mutexT	pipelines/global/mutexSet.hpp	/^typedef tthread::fast_mutex mutexT;$/;"	t
+normalizer1	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  Mat3 normalizer1() const {return Kinv_;}$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+normalizer2	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  Mat3 normalizer2() const {return Mat3::Identity();}$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+obs	sfm_landmark.hpp	/^  Observations obs;$/;"	m	struct:i23dSFM::sfm::Landmark
+operator ()	pipelines/sequential/sequential_SfM.cpp	/^  bool operator()(const std::pair<T1,T2>&left,$/;"	f	struct:i23dSFM::sfm::sort_pair_second
+operator ()	sfm_data_BA_ceres_camera_functor.hpp	/^  bool operator()($/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic
+operator ()	sfm_data_BA_ceres_camera_functor.hpp	/^  bool operator()($/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Brown_T2
+operator ()	sfm_data_BA_ceres_camera_functor.hpp	/^  bool operator()($/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K1
+operator ()	sfm_data_BA_ceres_camera_functor.hpp	/^  bool operator()($/;"	f	struct:i23dSFM::sfm::ResidualErrorFunctor_Pinhole_Intrinsic_Radial_K3
+poses	sfm_data.hpp	/^  Poses poses;$/;"	m	struct:i23dSFM::sfm::SfM_Data
+projection_matrix	pipelines/localization/SfM_Localizer.hpp	/^  Mat34 projection_matrix;$/;"	m	struct:i23dSFM::sfm::Image_Localizer_Match_Data
+pt2D	pipelines/localization/SfM_Localizer.hpp	/^  Mat pt2D;$/;"	m	struct:i23dSFM::sfm::Image_Localizer_Match_Data
+pt3D	pipelines/localization/SfM_Localizer.hpp	/^  Mat pt3D;$/;"	m	struct:i23dSFM::sfm::Image_Localizer_Match_Data
+putatives_matches	pipelines/structure_from_known_poses/structure_estimator.hpp	/^  matching::PairWiseMatches putatives_matches;$/;"	m	class:i23dSFM::sfm::SfM_Data_Structure_Estimation_From_Known_Poses
+regions_per_view	pipelines/sfm_regions_provider.hpp	/^  Hash_Map<IndexT, std::unique_ptr<features::Regions> > regions_per_view;$/;"	m	struct:i23dSFM::sfm::Regions_Provider
+reindex	pipelines/global/sfm_global_reindex.hpp	/^void reindex($/;"	f	namespace:i23dSFM::sfm
+relativePose	pipelines/sfm_robust_model_estimation.hpp	/^  geometry::Pose3 relativePose;$/;"	m	struct:i23dSFM::sfm::RelativePose_Info
+robustRelativePose	pipelines/sfm_robust_model_estimation.cpp	/^bool robustRelativePose($/;"	f	namespace:i23dSFM::sfm
+robust_triangulation	sfm_data_triangulation.cpp	/^bool SfM_Data_Structure_Computation_Robust::robust_triangulation($/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Robust
+robust_triangulation	sfm_data_triangulation.cpp	/^void SfM_Data_Structure_Computation_Robust::robust_triangulation(SfM_Data & sfm_data) const$/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Robust
+run	pipelines/structure_from_known_poses/structure_estimator.cpp	/^void SfM_Data_Structure_Estimation_From_Known_Poses::run($/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Estimation_From_Known_Poses
+s_Img_path	sfm_view.hpp	/^  std::string s_Img_path;$/;"	m	struct:i23dSFM::sfm::View
+s_root_path	sfm_data.hpp	/^  std::string s_root_path;$/;"	m	struct:i23dSFM::sfm::SfM_Data
+save	sfm_landmark.hpp	/^  void save( Archive & ar) const$/;"	f	struct:i23dSFM::sfm::Landmark
+save	sfm_landmark.hpp	/^  void save( Archive & ar) const$/;"	f	struct:i23dSFM::sfm::Observation
+serialize	sfm_view.hpp	/^  void serialize( Archive & ar )$/;"	f	struct:i23dSFM::sfm::View
+setInitialPair	pipelines/sequential/sequential_SfM.hpp	/^  void setInitialPair(const Pair & initialPair)$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+sfm	pipelines/global/GlobalSfM_rotation_averaging.cpp	/^namespace sfm{$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^namespace sfm{$/;"	n	namespace:i23dSFM
+sfm	pipelines/global/GlobalSfM_translation_averaging.cpp	/^namespace sfm{$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/global/GlobalSfM_translation_averaging.hpp	/^namespace sfm{$/;"	n	namespace:i23dSFM
+sfm	pipelines/global/mutexSet.hpp	/^namespace sfm{$/;"	n	namespace:i23dSFM
+sfm	pipelines/global/sfm_global_engine_relative_motions.cpp	/^namespace sfm{$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/global/sfm_global_engine_relative_motions.hpp	/^namespace sfm{$/;"	n	namespace:i23dSFM
+sfm	pipelines/global/sfm_global_reindex.hpp	/^namespace sfm{$/;"	n	namespace:i23dSFM
+sfm	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^namespace sfm{$/;"	n	namespace:i23dSFM
+sfm	pipelines/localization/SfM_Localizer.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/localization/SfM_Localizer.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/sequential/sequential_SfM.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/sequential/sequential_SfM.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/sfm_engine.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/sfm_features_provider.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/sfm_matches_provider.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/sfm_regions_provider.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/sfm_robust_model_estimation.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/sfm_robust_model_estimation.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	pipelines/structure_from_known_poses/structure_estimator.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	pipelines/structure_from_known_poses/structure_estimator.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_BA.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_BA_ceres.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	sfm_data_BA_ceres.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_BA_ceres_camera_functor.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_filters.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_filters_frustum.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	sfm_data_filters_frustum.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_io.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	sfm_data_io.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_io_baf.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_io_cereal.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_io_ply.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_triangulation.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	sfm_data_triangulation.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_data_utils.cpp	/^namespace sfm {$/;"	n	namespace:i23dSFM	file:
+sfm	sfm_data_utils.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_filters.hpp	/^namespace sfm { $/;"	n	namespace:i23dSFM
+sfm	sfm_landmark.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_report.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm	sfm_view.hpp	/^namespace sfm {$/;"	n	namespace:i23dSFM
+sfm_data_	pipelines/localization/SfM_Localizer_Single_3DTrackObservation_Database.hpp	/^  const SfM_Data * sfm_data_;$/;"	m	class:i23dSFM::sfm::SfM_Localization_Single_3DTrackObservation_Database
+size	pipelines/global/mutexSet.hpp	/^    size_t size() const {$/;"	f	class:i23dSFM::sfm::MutexSet
+sort_pair_second	pipelines/sequential/sequential_SfM.cpp	/^struct sort_pair_second {$/;"	s	namespace:i23dSFM::sfm	file:
+structure	sfm_data.hpp	/^  Landmarks structure;$/;"	m	struct:i23dSFM::sfm::SfM_Data
+track_sample_triangulation	sfm_data_triangulation.cpp	/^Vec3 SfM_Data_Structure_Computation_Robust::track_sample_triangulation($/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Robust
+triangulate	pipelines/structure_from_known_poses/structure_estimator.cpp	/^void SfM_Data_Structure_Estimation_From_Known_Poses::triangulate($/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Estimation_From_Known_Poses
+triangulate	sfm_data_triangulation.cpp	/^void SfM_Data_Structure_Computation_Blind::triangulate(SfM_Data & sfm_data) const$/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Blind
+triangulate	sfm_data_triangulation.cpp	/^void SfM_Data_Structure_Computation_Robust::triangulate(SfM_Data & sfm_data) const$/;"	f	class:i23dSFM::sfm::SfM_Data_Structure_Computation_Robust
+triplets_matches	pipelines/structure_from_known_poses/structure_estimator.hpp	/^  matching::PairWiseMatches triplets_matches;$/;"	m	class:i23dSFM::sfm::SfM_Data_Structure_Estimation_From_Known_Poses
+ui_height	sfm_view.hpp	/^  IndexT ui_width, ui_height;$/;"	m	struct:i23dSFM::sfm::View
+ui_width	sfm_view.hpp	/^  IndexT ui_width, ui_height;$/;"	m	struct:i23dSFM::sfm::View
+unormalizeError	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  double unormalizeError(double val) const { return sqrt(val) \/ Kinv_(0,0);}$/;"	f	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+used_pairs	pipelines/global/GlobalSfM_rotation_averaging.hpp	/^  mutable Pair_Set used_pairs; \/\/ pair that are considered as valid by the rotation averaging solver$/;"	m	class:i23dSFM::sfm::GlobalSfM_Rotation_AveragingSolver
+vec_KR_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  std::vector<Mat3> vec_KR_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+vec_inliers	pipelines/localization/SfM_Localizer.hpp	/^  std::vector<size_t> vec_inliers;$/;"	m	struct:i23dSFM::sfm::Image_Localizer_Match_Data
+vec_inliers	pipelines/sfm_robust_model_estimation.hpp	/^  std::vector<size_t> vec_inliers;$/;"	m	struct:i23dSFM::sfm::RelativePose_Info
+views	sfm_data.hpp	/^  Views views;$/;"	m	struct:i23dSFM::sfm::SfM_Data
+x	sfm_landmark.hpp	/^  Vec2 x;$/;"	m	struct:i23dSFM::sfm::Observation
+x1_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const Mat & x1_, & x2_, & x3_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+x1n_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  Mat x1n_, x2n_, x3n_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+x2_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const Mat & x1_, & x2_, & x3_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+x2n_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  Mat x1n_, x2n_, x3n_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+x3_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  const Mat & x1_, & x2_, & x3_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+x3n_	pipelines/global/triplet_t_ACRansac_kernelAdaptator.hpp	/^  Mat x1n_, x2n_, x3n_;$/;"	m	class:i23dSFM::sfm::TranslationTripletKernel_ACRansac
+z_near_z_far_perView	sfm_data_filters_frustum.hpp	/^  NearFarPlanesT z_near_z_far_perView; \/\/ Near & Far plane distance per view$/;"	m	class:i23dSFM::sfm::Frustum_Filter
+~GlobalSfMReconstructionEngine_RelativeMotions	pipelines/global/sfm_global_engine_relative_motions.cpp	/^GlobalSfMReconstructionEngine_RelativeMotions::~GlobalSfMReconstructionEngine_RelativeMotions()$/;"	f	class:i23dSFM::sfm::GlobalSfMReconstructionEngine_RelativeMotions
+~ReconstructionEngine	pipelines/sfm_engine.hpp	/^  virtual ~ReconstructionEngine() {}$/;"	f	class:i23dSFM::sfm::ReconstructionEngine
+~SequentialSfMReconstructionEngine	pipelines/sequential/sequential_SfM.cpp	/^SequentialSfMReconstructionEngine::~SequentialSfMReconstructionEngine()$/;"	f	class:i23dSFM::sfm::SequentialSfMReconstructionEngine
+~SfM_Localizer	pipelines/localization/SfM_Localizer.hpp	/^  virtual ~SfM_Localizer() {}$/;"	f	class:i23dSFM::sfm::SfM_Localizer
